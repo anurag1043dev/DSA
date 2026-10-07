@@ -1,0 +1,145 @@
+Default VALUES
+1 string =null;
+2. int =0;
+3. double = 0.0;
+
+PRIVATE DATA MEM!
+agr use acess krna kewal uss class tk hi kr skte h bt use dusrii class me acess nhi kr skte!
+
+PRIVATE (DATA MEM / function) ko access krne ke liye public function ka use kro!
+
+4> {get/SET} function use to get private data mem! 
+
+5> eNCAPUSULATION => chupa hua hidden data saare datamem. private he!
+
+6> Access modifiers 
+name         access 
+public        world
+private        till same class ony , access by gettter or public funtion
+protected      in whole package,and subclass
+no modifiers   in whole package not in subclass !
+
+
+
+String builder input !
+=> StringBuilder sb=new stringBuilder(sc.nextLine());
+
+
+7 >
+     CONSTRUCTOR!
+     is just a mehtod use to initialise the data mem
+     has no reutrn type
+     name is same as of class 
+     
+8>  COnstrutor Overloading
+     constructor ke parameter alag alag honge same {name and return type}
+
+9>   Why we need this keyword!
+
+    Dekh Baabe!
+      jb ab constructor me parameter ke namee same as Data Member
+      krna he to 
+      wrna wha constructor confuse hoke koi value assign nhi krega or default value dedega
+      eg
+      Car(int price,String name){
+          name=name;
+          price=price   => give{null , 0 } Result;
+
+      }
+
+       // Shllow Copy !
+   Pokemon p3=p1; //P3 IS SHALLOW COPY OF P1=>  P3 CAN COntrol  p1!
+   //eg
+   p3.type="Water";
+   System.out.println(p3.type);
+    
+    Om shree rameshwar mahadevay namah
+
+10> why we nedd Final keyword !
+final int x=90; x now cant be changed !
+
+Imp Concept => on Static and Final key wrd!
+
+
+     STATIC KEWWORD ;> bot froms a shareable variable !
+     eg 
+     but this can be updated after intialization 
+
+     Final can't be  updated!
+     
+
+     public class finalAndstatic {
+
+    public static void main(String[] args){
+        Cricketer c1=new Cricketer();
+        Cricketer c2=new Cricketer();
+        c1.country="Japan";
+        
+       // c1.country="england";  will generate an error ! bhau
+        System.out.println(c2.country); // static variable is shared by all objects of class Cricketer
+    }
+        see Yha shareable Variable Country he  and obj c1 AND c2 me 
+        sirf => runs , name and avg bnega baaki 
+        
+        
+    => COUNTRY  is a Shareable variable!
+
+
+
+        // note Jab final Static likhte he to wo variable ki value fix ho jayegi and it wont change !
+
+
+
+=>    public static void main(String[] args){
+        Cricketer c1=new Cricketer();
+        Cricketer c2=new Cricketer();
+        c1.country="Japan";
+        
+       // c1.country="england";  will generate an error ! bhau
+        System.out.println(c2.country);
+         // static variable is shared by all objects of class Cricketer
+        fun();
+    }
+    private  void fun(){  // error non static mtd cnt be refernced from static context
+        System.out.println("Hello Ajay");
+    }  hme 
+    private static void bnana pdega tbhi ye shre ho page main ke stah
+
+
+    if we Create fun in Cricketer class 
+                        void print(){ // ye mtd sabke liye alag hoga to ye static me set nhii hoga
+       System.out.print(runs+" "+name+" "+avg); 
+    }
+
+
+
+    Complex class
+         void add(ComplexNumber z){
+       // z.x=9;  will tke all obj of complex;
+       // we need to add z1+z2
+       this.x+=z.x;  // boleto this =z1 for z1.add(z2);
+       this.y+=z.y;
+    } 
+    void multiply(ComplexNumber z){
+        this.x*=z.x;
+        this.y*=z.y;
+    }
+
+    call z1.add(z2);   jab hme z1 me z2 add 
+    krna h so only z1 ke change honge z2 is still same !
+
+
+    3=> Multiplication of Complex 
+    
+    void multiply(ComplexNumber z){
+        this.x=x*z.x - y*z.y;
+        this.y=y*z.x +y*z.y;}
+   
+   
+    4 => Division oof Complex ! 
+     void Divide(ComplexNumber z){  // ke liye x and y ko double bna ddo!
+
+        this.x=(x*z.x+y*z.y)/(x*x + z.x*z.x);
+
+
+    }

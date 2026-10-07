@@ -1,0 +1,18 @@
+lass Vehicle{
+    int engine;
+    int wheels;
+    int speed;
+    int seats;
+}
+
+classPowerVehicle extends Vehicle{
+    int engine;
+
+}
+class Aircrafts extend PowerVehicle{   // multilvl Inheritance
+    int 
+}
+
+
+
+multiple inheritance is not possible in java

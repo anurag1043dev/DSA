@@ -1,0 +1,74 @@
+
+String is immutable =>  // VIP => string is immutable;
+        cases concat , upeer  Lower 
+
+        String s=Raghav;
+
+        s+="garg"; => so here 
+        
+FORCE CHANGING THE CHAR 
+
+        String n="Anurag";
+        
+        n=s.subString(0,3)+M+s.subString(4);=>AnuMag
+
+        n.concat(b);
+        n.toLowerCase();
+        System.out.println(n); // no change 
+        // we need to do => s=n.toLowerCase();
+
+
+=> Equals mtd => compares with refrence : much better fir comparing string
+              s1= new String ("Anurag"); // forms a new String
+              s2=newString("Anuarag);  // do diifrnt location assign hofi coz of new keyword!
+              s1==s2:> yes;
+              s1.equals(s2)  =>false , hceck refrence 
+
+
+=> STRING TO integer
+         =>  Integer.parseInt(str);
+
+         Integer.ToString(s);
+
+
+=> STRING TO CHAR ARRAY
+  char arr=      str.toCharArray();
+
+
+IndexOf( ) & compareTo()
+            => comapres two string lexiographically
+            means ACSII VALUES COMPARE KREGA
+                 CHAR WISE eg Raghav lexio samaller than "Sneha"
+
+
+            => Returns 0 => if same
+                       1 => same but larger in length eg harshit harshita
+                       -1 => if s1.compare(s2) me s1 lexio small h to 
+
+
+Using plus opertaor
+        String + int = string ;
+
+        char + int = integer;
+                    =>  //VIP THING 
+          String st="Bhakti";
+          s+="hi shaktti he";
+          s+='\n' // abhi koi change nhi ayega but jab next elemnt add hoga to wo next line me jayega
+
+          2 => System.out.println  ("raghav"+10+20);  //=> raghav1020
+
+        3 => System.out.println('a'+2+"Iasha"); // 98iasha          
+
+
+COUNTING WORDS WITHOUT LOOP  
+                      => int n=2000;
+
+        // Count no of WORD without using loops!
+
+        String s=""+n;
+        System.out.println(s.length());
+
+STRINGBUILDER
+             => //EMPTY STRING BUILDER
+        StringBuilder s=new StringBuilder();
+        System.out.println(s.capacity());  // default capacity is 16

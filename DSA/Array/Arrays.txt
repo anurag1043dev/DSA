@@ -1,0 +1,66 @@
+
+
+VARIABLE =>  Stores data 
+
+DATA STRUCTURE
+            =>   a specialized format designed to organise store,manipulate
+                 and retrive data effiiently
+
+Array 
+     => LINEAR data structure !
+     -> data stored in contiguous memory location 
+
+
+     => TO PRINT WHOLE Array
+     for(int i=0;i<arr.length;i++){
+            System.out.print(arr[i]+" ");  
+        }
+
+wrong mtd =>  System.out.println(arr);
+
+
+
+MUTABILITY  => we can change the elements of array
+
+DEFAULT value of empty elemnts = 0 (ZERO);
+
+mtd == int max=Integer.MIN_VALUE;
+
+DOUBLE ARRAY => default value is 0.0;
+
+Character ARRAY =>   "\0"  IS nULL character ! has ascii vale =0;
+                
+                =>char ch="\0"; 
+       /// to print ascii value
+       System.out.println((int)ch);  // output 0
+
+
+UPDATING ELEMENTS by passsing ARRAY IN Methods !
+               => public static void main(String []args){
+        int x[]={10,3,5,6};
+        System.out.println(x[2]);
+        change(x);
+        System.out.println(x[2]);
+    }
+    public static void change( int[] y){
+        x[2]=99;   // value of arr gets updated !
+                                PASS BY REFRENCE 
+                             => why => x ek refrence variable he jo array ke zeroth
+                               element ko refer kr ra he
+
+                             => in METHOD CHANGE me y ke var h jisme x jaayega jo => it stores address of arr => pass by refrence 
+
+                            => s0 SARRE CHANGES ORIGINAL array me honge no new array is created!
+
+     case 2 ;
+
+
+        IF x=2 
+        then we pass it to change mtd 
+             now y store x => contains value => pass by value => hence x ki original value me change nhi hoga
+
+        
+    }
+  
+
+
